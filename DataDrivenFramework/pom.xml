@@ -1,0 +1,118 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.sandeep</groupId>
+	<artifactId>DataDrivenFramework</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<suiteXmlFile>testng.xml</suiteXmlFile>
+		<java.version>11.0.9</java.version>
+		<testng.version>7.3.0</testng.version>
+		<selenium.version>3.141.59</selenium.version>
+		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-surefire-plugin.version>3.0.0-M5</maven-surefire-plugin.version>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>${maven-surefire-plugin.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.Maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>${maven-compiler-plugin.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/maven-surefire-common -->
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>maven-surefire-common</artifactId>
+			<version>${maven-surefire-plugin.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng -->
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+			<artifactId>surefire-testng</artifactId>
+			<version>${maven-surefire-plugin.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20201115</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.yaml/snakeyaml -->
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>1.27</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.paypal.selion/SeLion-DataProviders -->
+		<dependency>
+			<groupId>com.paypal.selion</groupId>
+			<artifactId>SeLion-DataProviders</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+
+
+
+
+	</dependencies>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>${maven-surefire-plugin.version}</version>
+					<configuration>
+						<suiteXmlFiles>
+							<suiteXmlFile>testng.xml</suiteXmlFile>
+						</suiteXmlFiles>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+
+
+</project>
